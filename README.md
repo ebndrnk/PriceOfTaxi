@@ -11,7 +11,7 @@ at the moment the application calculates the cost of a taxi from the points I sp
 
 ### Step 1: Creater docker-compose file
 
-Create the docker-compose.yml on your local machine:
+Copy my docker-compose.yml on your local machine
 
 ### Step 2: Navigate to the Project Directory
 
