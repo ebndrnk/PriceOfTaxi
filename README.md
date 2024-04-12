@@ -21,6 +21,19 @@ Change your current directory to the file directory
 
 run the command "docker-compose up"
 
+### Step 4: copy the configuration files
+
+folders will appear in your directory:
+/config/prometheus.yml,
+/ELK/logstash/config/logstash.yml,
+/ELK/logstash/pipeline
+
+
+1. delete the prometheus.yml folder and replace it with the corresponding file from my repository
+2. delete the logstash.yml folder and replace it with the corresponding file from my repository
+3. place the logstash.conf file in the pipline folder
+
+
 ## Additional Information
 
 The application is available at http://localhost:8080/current-price
