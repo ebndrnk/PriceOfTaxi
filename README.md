@@ -42,6 +42,10 @@ The application is available at http://localhost:8080/current-price
 You can see all logs at http://localhost:5601
 And metrics at http://localhost:3000
 
+url for connect prometheus to grafana http://host.docker.internal:9090
+login for grafana: admin
+password for grafana: admin
+
 ## Conclusion
 
 This README provides a basic guide to running your application using Docker Compose. For more detailed information, refer to the official Docker documentation or the project's documentation.
