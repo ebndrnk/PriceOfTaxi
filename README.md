@@ -33,6 +33,8 @@ folders will appear in your directory:
 2. delete the logstash.yml folder and replace it with the corresponding file from my repository
 3. place the logstash.conf file in the pipline folder
 
+these files can be found in the corresponding paths in my repository
+
 
 ## Additional Information
 
