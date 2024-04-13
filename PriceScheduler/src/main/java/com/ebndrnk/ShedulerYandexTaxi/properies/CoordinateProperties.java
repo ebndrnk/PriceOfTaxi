@@ -12,4 +12,5 @@ public class CoordinateProperties {
     private String startLatitude;
     private String finishLongitude;
     private String finishLatitude;
+    private int relativeLength;
 }

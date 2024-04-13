@@ -8,18 +8,13 @@ coordinate:
   start-latitude: 53.930974
   finish-longitude: 27.592652
   finish-latitude: 53.919208
+  relative-length: 1370
 
 spring:
-  datasource:
-    url: jdbc:postgresql://localhost:5432/taxi
-    username: postgres
-    password: postgres
-    driver-class-name: org.postgresql.Driver
-  jpa:
-    database: postgresql
-    hibernate:
-      ddl-auto: create
-    show-sql: true
+  data:
+    redis:
+      port: 6279
+      host: localhost
 
 management:
   endpoints.web.exposure.include: 'prometheus, health'
@@ -30,4 +25,5 @@ management:
     distribution:
       percentiles-histogram:
         "[http.server.requests]": true
+
 

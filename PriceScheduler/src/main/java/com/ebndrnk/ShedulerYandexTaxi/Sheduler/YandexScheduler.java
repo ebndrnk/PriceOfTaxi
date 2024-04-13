@@ -19,7 +19,7 @@ public class YandexScheduler {
     private int CountOfScheduling = 0;
 
     @Timed("schedulerTaxi")
-    @Scheduled(fixedRate = 30_000)
+    @Scheduled(fixedRate = 3_000)
     public void updatePrice(){
         Coordinate startPoint = new Coordinate(coordinateProperties.getStartLongitude(),
                                                 coordinateProperties.getStartLatitude());
@@ -27,7 +27,8 @@ public class YandexScheduler {
         Coordinate endPoint = new Coordinate(coordinateProperties.getFinishLongitude(),
                                             coordinateProperties.getFinishLatitude());
 
-        taxiService.getPrice(startPoint, endPoint);
+        int RELATIVE_LENGTH = coordinateProperties.getRelativeLength();
+        taxiService.savePrice(startPoint, endPoint, RELATIVE_LENGTH);
 
 
         log.info("Sheduled running at " + CountOfScheduling++ + " times");
