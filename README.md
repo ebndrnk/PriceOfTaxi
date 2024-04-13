@@ -38,9 +38,9 @@ these files can be found in the corresponding paths in my repository
 
 ## Additional Information
 
-#The application is available at http://localhost:8080/current-price
-#You can see all logs at http://localhost:5601
-#And metrics at http://localhost:3000
+The application is available at http://localhost:8080/current-price
+You can see all logs at http://localhost:5601
+And metrics at http://localhost:3000
 
 url for connect prometheus to grafana http://host.docker.internal:9090
 login for grafana: admin
