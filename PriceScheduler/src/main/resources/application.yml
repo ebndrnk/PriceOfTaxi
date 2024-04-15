@@ -13,7 +13,7 @@ coordinate:
 spring:
   data:
     redis:
-      port: 6279
+      port: 6379
       host: localhost
 
 management:

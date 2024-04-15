@@ -5,10 +5,10 @@ services:
   redis:
     image: redis:latest
     ports:
-      - 6279:6279
+      - 6379:6379
 
   scheduler:
-    image: taxi-service:latest
+    image: sportegor/taxi-service:latest
     ports:
       - 8080:8080
     environment:
