@@ -12,7 +12,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.text.DecimalFormat;
 import java.util.concurrent.atomic.AtomicInteger;
 
 @Service
@@ -27,7 +26,7 @@ public class TaxiService {
     @Autowired
     public TaxiService(TaxiApiClient taxiApiClient, MeterRegistry meterRegistry, PriceRedisRepository priceRedisRepository, PriceRedisRepository priceRedisRepository1, YandexProperties yandexProperties) {
         this.taxiApiClient = taxiApiClient;
-        this.priceRedisRepository = priceRedisRepository1;
+        this.priceRedisRepository = priceRedisRepository;
         this.yandexProperties = yandexProperties;
         price = new AtomicInteger();
         meterRegistry.gauge("price", price);
@@ -46,16 +45,11 @@ public class TaxiService {
             throw new OptionsEmptyException();
         }
 
-        DecimalFormat df = new DecimalFormat("#.##");
-
 
         double priceDouble = currentPrice.getOptions().get(0).getPrice();
 
-        price.set((int) priceDouble/relativeLength*1000);
-
-        priceRedisRepository.save("price", df.format(priceDouble/relativeLength*1000));
-
-
+        price.set((int) (priceDouble/relativeLength*1000));
+        priceRedisRepository.save("price", String.format("%.2f", priceDouble/relativeLength*1000));
 
     }
 

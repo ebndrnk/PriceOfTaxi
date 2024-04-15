@@ -2,9 +2,11 @@ package com.ebndrnk.ShedulerYandexTaxi.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
 @AllArgsConstructor
+@NoArgsConstructor
 public class Coordinate {
     public String longitude;
     public String latitude;

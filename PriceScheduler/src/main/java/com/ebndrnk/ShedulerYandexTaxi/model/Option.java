@@ -1,8 +1,11 @@
 package com.ebndrnk.ShedulerYandexTaxi.model;
 
+
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
+@NoArgsConstructor
 public class Option {
     public double price;
     public double min_price;
