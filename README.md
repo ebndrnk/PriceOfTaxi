@@ -7,6 +7,16 @@ at the moment the application calculates the cost of a taxi from the points I sp
 
 - Docker installed on your machine.
 
+## Quick Start
+
+### Step 1: Creater docker-compose file
+
+Copy my docker-compose.yml on your local machine
+
+### Step 2: run!
+
+run the command "docker-compose up"
+
 ## Getting Started
 
 ### Step 1: Creater docker-compose file
